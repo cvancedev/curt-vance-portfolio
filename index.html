@@ -639,6 +639,71 @@
     .nav-links { display: none; }
     .section { padding: 64px 0; }
   }
+
+  .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 24px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.contact-modal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: transparent;
+  border: 0;
+  color: var(--fg);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.contact-modal h2 {
+  margin: 0 0 8px;
+}
+
+.contact-modal p {
+  color: var(--fg-2);
+  margin-bottom: 24px;
+}
+
+#contact-form {
+  display: grid;
+  gap: 14px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  color: var(--fg);
+  font-family: var(--font-sans);
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
 </style>
 </head>
 <body>
@@ -662,9 +727,9 @@
       <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
-      <a class="cta" href="mailto:curtvance.dev@hotmail.com">
+      <a class="btn btn-primary open-contact-modal" href="#">
         <span style="width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 6px #34d399;"></span>
-        Available
+        Get in touch
       </a>
     </div>
   </div>
@@ -675,10 +740,10 @@
   <div class="hero-meta">
     <span class="status-pill"><span class="status-dot"></span> Open to opportunities</span>
     <span>Wakeman, OH</span>
-    <span>·</span>
-    <span>EST / UTC−5</span>
-    <span>·</span>
-    <span>v2026.05</span>
+<span>·</span>
+<a href="https://github.com/cvancedev" target="_blank" rel="noopener">GitHub</a>
+<span>·</span>
+<a href="https://linkedin.com/in/curt-vance-b807633ba" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 
   <h1 class="hero-h1">
@@ -693,13 +758,13 @@
         I'm <strong>Curt Vance</strong> — a frontend developer focused on building <strong>responsive, user-friendly</strong> web applications. I work with <strong>React, Next.js, TypeScript</strong> and Tailwind CSS to turn ideas into clean, modern interfaces grounded in solid UI/UX principles.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">
-          View projects
+        <a class="btn btn-primary open-contact-modal" href="#">
+          Get in touch
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a class="btn btn-ghost" href="https://github.com/cvancedev" target="_blank" rel="noopener">
+        <a class="btn btn-ghost" href="#work">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-          GitHub
+        Projects
         </a>
       </div>
     </div>
@@ -1072,9 +1137,26 @@
     </div>
   </div>
 </footer>
+<div class="modal-overlay" id="contact-modal">
+  <div class="contact-modal">
+    <button class="modal-close" id="modal-close">×</button>
+    <h2>Get in touch</h2>
+    <p>Send me a message and I’ll get back to you.</p>
 
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" placeholder="Your message" rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">Send message</button>
+    </form>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // theme toggle
+ emailjs.init({
+  publicKey: "Fx9JYRkcJIXjB_jkU",
+});
   const root = document.documentElement;
   const tBtn = document.getElementById('theme-toggle');
   const saved = localStorage.getItem('cv-theme');
@@ -1095,7 +1177,51 @@
       }
     });
   });
+const modal = document.getElementById("contact-modal");
+const openModalButtons = document.querySelectorAll(".open-contact-modal");
+const closeModalButton = document.getElementById("modal-close");
+
+openModalButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.classList.add("active");
+  });
+});
+
+closeModalButton.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+  "service_s1e8maq",
+  "template_p5jqcpr",
+  this,
+  "Fx9JYRkcJIXjB_jkU"
+)
+  .then(() => {
+    alert("✅ Thanks for reaching out! I'll get back to you soon.");
+    contactForm.reset();
+    modal.classList.remove("active");
+  })
+  .catch((error) => {
+    console.error("EmailJS Error:", error);
+    alert("Something went wrong. Please try again.");
+  });
+});
+
 </script>
+
 
 </body>
 </html>
