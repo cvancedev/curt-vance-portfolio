@@ -704,6 +704,26 @@
 #contact-form textarea {
   resize: vertical;
 }
+
+.current-build {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 18px 20px;
+  margin-bottom: 48px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.current-build:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
 </style>
 </head>
 <body>
@@ -881,6 +901,18 @@
 
 <!-- ============ PROJECTS ============ -->
 <section id="work" class="shell section">
+ <a
+  class="current-build"
+  href="https://autospec-app.vercel.app/"
+  target="_blank"
+  rel="noopener"
+>
+  <span class="info-key">Current Build</span>
+  <span class="info-val">
+    🚗 <strong>AutoSpec</strong> • Vehicle specification platform built with Next.js, TypeScript, Tailwind CSS, testing, and NHTSA API integration.
+    <span style="color:var(--accent);">View Live →</span>
+  </span>
+</a>
   <div class="section-head">
     <div>
       <div class="section-label">01 · Selected Work</div>
@@ -901,6 +933,13 @@
           <span>·</span>
           <span>2026</span>
         </div>
+        <span class="chip" style="
+        background: var(--accent);
+        color:white;
+        border:none;
+        ">
+        ⭐ Featured Project
+        </span>
         <h3 class="proj-title">SKINSTRIC AI</h3>
         <p class="proj-desc">An AI-driven skin analysis interface. Clean, editorial UI that walks users through capture, analysis, and detailed results — built to feel premium and clinical without being cold.</p>
         <div class="proj-stack">
@@ -1168,6 +1207,7 @@
       <a class="btn btn-ghost" href="/Curt_Vance_Resume.pdf" download>
         Download PDF
       </a>
+   
     </div>
   </div>
 </div>
