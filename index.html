@@ -165,6 +165,7 @@
     font-family: var(--font-mono); font-size: 12px;
     color: var(--fg-2); margin-bottom: 32px;
     flex-wrap: wrap;
+    row-gap: 8px;
   }
   .status-pill {
     display: inline-flex; align-items: center; gap: 8px;
@@ -348,6 +349,7 @@
   .proj-info {
     padding: 36px 36px 32px;
     display: flex; flex-direction: column; gap: 20px;
+    min-width: 0;
   }
   .proj-tag-row {
     display: flex; align-items: center; gap: 12px;
@@ -630,14 +632,105 @@
 
   /* responsive */
   @media (max-width: 960px) {
+    :root { --pad: 24px; }
     .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
     .project, .project.reverse { grid-template-columns: 1fr; }
     .project.reverse .proj-info { order: 1; }
     .project.reverse .proj-visual { order: 2; border-right: 0; border-top: 1px solid var(--line); }
-    .proj-visual { border-left: 0; border-top: 1px solid var(--line); }
+    .proj-visual { border-left: 0; border-top: 1px solid var(--line); min-height: 280px; }
     .nav-links { display: none; }
     .section { padding: 64px 0; }
+    .section-head { margin-bottom: 36px; }
+    .section-title { font-size: clamp(28px, 3.5vw, 48px); }
+    .proj-title { font-size: 24px; }
+    .hero-h1 { font-size: clamp(40px, 6vw, 128px); }
+    .hero-meta { font-size: 11px; }
+  }
+
+  @media (max-width: 768px) {
+    :root { --pad: 20px; }
+    .nav-inner { padding: 12px var(--pad); gap: 16px; }
+    .brand { font-size: 12px; gap: 8px; }
+    .brand-mark { width: 24px; height: 24px; font-size: 10px; }
+    .hero { padding: 64px 0 80px; }
+    .hero-grid { gap: 32px; margin-top: 48px; }
+    .hero-meta { font-size: 11px; gap: 10px; }
+    .terminal { box-shadow: 0 12px 24px rgba(0,0,0,0.3); }
+    .term-body { padding: 14px; font-size: 12px; }
+    .marquee-track { font-size: 12px; gap: 36px; }
+    .section-title { font-size: clamp(24px, 3vw, 48px); }
+    .section { padding: 48px 0; }
+    .stack-grid { grid-template-columns: 1fr; }
+    .proj-tag-row { font-size: 10px; }
+    .proj-title { font-size: 20px; }
+    .proj-desc { font-size: 14px; max-width: 100%; }
+    .chip { font-size: 10px; padding: 3px 8px; }
+    .proj-links { gap: 12px; font-size: 12px; }
+    .contact-h { font-size: clamp(32px, 6vw, 112px); }
+    .icon-btn { width: 30px; height: 30px; }
+    .btn { padding: 10px 14px; font-size: 12px; }
+  }
+
+  @media (max-width: 540px) {
+    :root { --pad: 16px; }
+    .nav-inner { gap: 12px; padding: 12px var(--pad); }
+    .hero { padding: 48px 0 60px; }
+    .hero-meta { font-size: 11px; gap: 8px; row-gap: 6px; }
+    .status-pill { font-size: 11px; padding: 5px 10px; }
+    .hero-h1 { font-size: clamp(32px, 5.5vw, 128px); letter-spacing: -0.04em; line-height: 0.9; }
+    .hero-actions { gap: 6px; margin-top: 20px; }
+    .btn { padding: 8px 10px; font-size: 11px; min-height: 30px; }
+    .hero-bio { font-size: 14px; line-height: 1.6; }
+    .hero-grid { gap: 28px; margin-top: 40px; }
+    .terminal { border-radius: 8px; }
+    .term-head { padding: 8px 10px; }
+    .term-body { padding: 12px; font-size: 11px; line-height: 1.6; }
+    .marquee { margin-top: 48px; }
+    .marquee-track { font-size: 11px; gap: 28px; }
+    .section { padding: 40px 0; }
+    .section-head { gap: 12px; margin-bottom: 24px; flex-direction: column; }
+    .section-label { font-size: 10px; }
+    .section-title { font-size: clamp(20px, 2.5vw, 48px); }
+    .section-sub { font-size: 13px; max-width: 100%; }
+    .stack-cell { min-height: 140px; padding: 16px; }
+    .stack-icon { width: 28px; height: 28px; }
+    .stack-name { font-size: 14px; }
+    .stack-desc { font-size: 11px; }
+    .stack-num { font-size: 10px; top: 10px; right: 12px; }
+    .current-build { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 16px; margin-bottom: 32px; font-size: 12px; }
+    .info-key { font-size: 10px; }
+    .info-val { font-size: 12px; }
+    .proj-info { padding: 20px 16px 16px; gap: 16px; }
+    .proj-tag-row { font-size: 9px; gap: 6px; margin-bottom: 6px; }
+    .proj-num { font-size: 10px; }
+    .proj-title { font-size: 18px; }
+    .proj-desc { font-size: 13px; line-height: 1.5; max-width: 100%; }
+    .highlights-title { font-size: 9px; margin-bottom: 6px; }
+    .highlights-list { gap: 4px; }
+    .highlight-item { font-size: 11px; gap: 5px; }
+    .highlight-item::before { font-size: 10px; }
+    .proj-stack { gap: 3px; margin-top: 10px; flex-wrap: wrap; }
+    .chip { font-size: 9px; padding: 2px 6px; }
+    .proj-links { gap: 8px; font-size: 10px; flex-wrap: wrap; }
+    .proj-link { font-size: 10px; }
+    .about-grid { gap: 32px; }
+    .about-bio { font-size: 13px; line-height: 1.5; }
+    .info-row { grid-template-columns: 80px 1fr; gap: 8px; padding: 10px 12px; font-size: 11px; }
+    .info-key { font-size: 8px; }
+    .info-val { font-size: 10px; }
+    .contact-eyebrow { font-size: 10px; margin-bottom: 12px; }
+    .contact-h { font-size: clamp(24px, 4.5vw, 112px); line-height: 1; margin: 0; }
+    .contact-mail { font-size: 11px; padding: 8px 12px; gap: 10px; margin-top: 20px; }
+    .contact-mail svg { width: 10px; height: 10px; }
+    footer { padding: 24px var(--pad); }
+    .foot-inner { flex-direction: column; text-align: center; font-size: 11px; gap: 12px; }
+    .foot-links { gap: 12px; font-size: 11px; flex-wrap: wrap; justify-content: center; }
+    .preview-window { inset: 14px; }
+    .modal-overlay { padding: 16px; }
+    .contact-modal { max-width: calc(100% - 32px); padding: 20px; }
+    #contact-form { gap: 10px; }
+    #contact-form input, #contact-form textarea { padding: 10px 12px; font-size: 13px; border-radius: 6px; }
   }
 
   .modal-overlay {
@@ -707,17 +800,18 @@
 
 .current-build {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  padding: 18px 20px;
-  margin-bottom: 48px;
-  background: var(--bg-card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  transition: all 0.2s ease;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    padding: 18px 20px;
+    margin-bottom: 48px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    transition: all 0.2s ease;
+    flex-wrap: wrap;
 }
 
 .current-build:hover {
