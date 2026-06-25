@@ -724,6 +724,42 @@
   border-color: var(--accent);
   transform: translateY(-1px);
 }
+
+.proj-highlights {
+  margin-top: 16px;
+  padding: 12px 0;
+}
+
+.highlights-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.highlights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.highlight-item {
+  font-size: 13px;
+  color: var(--fg-2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.highlight-item::before {
+  content: "✓";
+  color: var(--green);
+  font-weight: 600;
+  font-size: 12px;
+}
+
 </style>
 </head>
 <body>
@@ -936,16 +972,30 @@
         </span>
         <h3 class="proj-title">AutoSpec</h3>
         <p class="proj-desc">Technician workflow application that combines live vehicle lookup, service specifications, diagnostic codes, job notes, and parts tracking into a single streamlined interface. Built with Next.js, React, TypeScript, Tailwind CSS, Jest, and the NHTSA API.</p>
+        <div class="proj-highlights">
+          <div class="highlights-title">Project Highlights</div>
+          <div class="highlights-list">
+            <div class="highlight-item">Live NHTSA API Integration</div>
+            <div class="highlight-item">React Query Data Fetching</div>
+            <div class="highlight-item">TypeScript Architecture</div>
+            <div class="highlight-item">Responsive Mobile Design</div>
+            <div class="highlight-item">Jest Test Suite</div>
+            <div class="highlight-item">GitHub Actions Continuous Integration</div>
+            <div class="highlight-item">Local Storage Persistence</div>
+          </div>
+        </div>
         <div class="proj-stack">
           <span class="chip">Next.js</span>
           <span class="chip">React</span>
           <span class="chip">TypeScript</span>
           <span class="chip">Tailwind CSS</span>
+          <span class="chip">React Query</span>
           <span class="chip">Jest</span>
+          <span class="chip">GitHub Actions</span>
           <span class="chip">NHTSA API</span>
         </div>
         <div class="proj-links">
-          <a class="proj-link" href="https://github.com/cvancedev/autospec" target="_blank" rel="noopener">View code →</a>
+          <a class="proj-link" href="https://github.com/cvancedev/autospec-app" target="_blank" rel="noopener">View code →</a>
           <a class="proj-link" href="https://autospec-app.vercel.app" target="_blank" rel="noopener">Live demo →</a>
         </div>
       </div>
