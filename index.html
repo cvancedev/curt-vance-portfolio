@@ -462,31 +462,14 @@
   .pv-iron .pw-body {
     background: linear-gradient(180deg, #1a0a08 0%, #0a0405 100%);
     color: #fff; padding: 0;
+    overflow: hidden;
   }
-  .pv-iron .iron-hero {
-    flex: 1; position: relative;
-    background:
-      radial-gradient(ellipse at 50% 70%, rgba(255, 53, 53, 0.15), transparent 60%),
-      linear-gradient(135deg, #0a0405, #2a0a08);
-  }
-  .pv-iron .iron-badge {
-    position: absolute; top: 10px; left: 12px;
-    background: var(--accent); color: #fff;
-    font-family: var(--font-mono); font-size: 9px;
-    padding: 4px 8px; border-radius: 3px;
-    letter-spacing: 0.06em; font-weight: 600;
-  }
-  .pv-iron .iron-title {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
-    text-align: center;
-  }
-  .pv-iron .iron-cta {
-    position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%);
-    background: var(--accent); color: #fff;
-    font-family: var(--font-mono); font-size: 9px;
-    padding: 6px 14px; border-radius: 3px;
+  .pv-iron .autospec-shot {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
   }
 
   .pv-drive .pw-body {
@@ -632,7 +615,7 @@
 
   /* responsive */
   @media (max-width: 960px) {
-    :root { --pad: 24px; }
+    :root { --pad: 28px; }
     .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .stack-grid { grid-template-columns: repeat(2, 1fr); }
     .project, .project.reverse { grid-template-columns: 1fr; }
@@ -646,10 +629,11 @@
     .proj-title { font-size: 24px; }
     .hero-h1 { font-size: clamp(40px, 6vw, 128px); }
     .hero-meta { font-size: 11px; }
+    .hero, .section, .contact { padding-left: var(--pad); padding-right: var(--pad); }
   }
 
   @media (max-width: 768px) {
-    :root { --pad: 20px; }
+    :root { --pad: 24px; }
     .nav-inner { padding: 12px var(--pad); gap: 16px; }
     .brand { font-size: 12px; gap: 8px; }
     .brand-mark { width: 24px; height: 24px; font-size: 10px; }
@@ -667,13 +651,16 @@
     .proj-desc { font-size: 14px; max-width: 100%; }
     .chip { font-size: 10px; padding: 3px 8px; }
     .proj-links { gap: 12px; font-size: 12px; }
+    .proj-info { padding: 32px 32px 28px; }
+    .info-row { padding: 14px 18px; }
     .contact-h { font-size: clamp(32px, 6vw, 112px); }
     .icon-btn { width: 30px; height: 30px; }
     .btn { padding: 10px 14px; font-size: 12px; }
+    .hero, .section, .contact { padding-left: var(--pad); padding-right: var(--pad); }
   }
 
   @media (max-width: 540px) {
-    :root { --pad: 16px; }
+    :root { --pad: 20px; }
     .nav-inner { gap: 12px; padding: 12px var(--pad); }
     .hero { padding: 48px 0 60px; }
     .hero-meta { font-size: 11px; gap: 8px; row-gap: 6px; }
@@ -693,15 +680,15 @@
     .section-label { font-size: 10px; }
     .section-title { font-size: clamp(20px, 2.5vw, 48px); }
     .section-sub { font-size: 13px; max-width: 100%; }
-    .stack-cell { min-height: 140px; padding: 16px; }
+    .stack-cell { min-height: 140px; padding: 20px; }
     .stack-icon { width: 28px; height: 28px; }
     .stack-name { font-size: 14px; }
     .stack-desc { font-size: 11px; }
     .stack-num { font-size: 10px; top: 10px; right: 12px; }
-    .current-build { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 16px; margin-bottom: 32px; font-size: 12px; }
+    .current-build { flex-direction: column; align-items: flex-start; gap: 10px; padding: 16px 18px; margin-bottom: 32px; font-size: 12px; }
     .info-key { font-size: 10px; }
     .info-val { font-size: 12px; }
-    .proj-info { padding: 20px 16px 16px; gap: 16px; }
+    .proj-info { padding: 24px 20px 18px; gap: 16px; }
     .proj-tag-row { font-size: 9px; gap: 6px; margin-bottom: 6px; }
     .proj-num { font-size: 10px; }
     .proj-title { font-size: 18px; }
@@ -716,12 +703,12 @@
     .proj-link { font-size: 10px; }
     .about-grid { gap: 32px; }
     .about-bio { font-size: 13px; line-height: 1.5; }
-    .info-row { grid-template-columns: 80px 1fr; gap: 8px; padding: 10px 12px; font-size: 11px; }
+    .info-row { grid-template-columns: 80px 1fr; gap: 10px; padding: 12px 14px; font-size: 11px; }
     .info-key { font-size: 8px; }
     .info-val { font-size: 10px; }
     .contact-eyebrow { font-size: 10px; margin-bottom: 12px; }
     .contact-h { font-size: clamp(24px, 4.5vw, 112px); line-height: 1; margin: 0; }
-    .contact-mail { font-size: 11px; padding: 8px 12px; gap: 10px; margin-top: 20px; }
+    .contact-mail { font-size: 11px; padding: 10px 14px; gap: 10px; margin-top: 20px; }
     .contact-mail svg { width: 10px; height: 10px; }
     footer { padding: 24px var(--pad); }
     .foot-inner { flex-direction: column; text-align: center; font-size: 11px; gap: 12px; }
@@ -731,6 +718,7 @@
     .contact-modal { max-width: calc(100% - 32px); padding: 20px; }
     #contact-form { gap: 10px; }
     #contact-form input, #contact-form textarea { padding: 10px 12px; font-size: 13px; border-radius: 6px; }
+    .hero, .section, .contact { padding-left: var(--pad); padding-right: var(--pad); }
   }
 
   .modal-overlay {
@@ -1100,11 +1088,7 @@
             <span class="pw-url">autospec.app</span>
           </div>
           <div class="pw-body">
-            <div class="iron-hero">
-              <span class="iron-badge">🔧 AutoSpec</span>
-              <div class="iron-title">Vehicle<br/>Specifications</div>
-              <div class="iron-cta">Get Started</div>
-            </div>
+            <img class="autospec-shot" src="public/images/autospec-preview.png" alt="AutoSpec preview screenshot" />
           </div>
         </div>
       </div>
