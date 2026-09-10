@@ -4,12 +4,23 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Curt Vance — Frontend Developer</title>
+<meta name="description" content="Curt Vance is a frontend developer building practical web applications with React, Next.js, and TypeScript." />
+<link rel="canonical" href="https://curtvance.dev/" />
+<meta property="og:title" content="Curt Vance — Frontend Developer" />
+<meta property="og:description" content="Curt Vance is a frontend developer building practical web applications with React, Next.js, and TypeScript." />
+<meta property="og:url" content="https://curtvance.dev/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Curt Vance — Frontend Developer" />
+<meta name="twitter:description" content="Curt Vance is a frontend developer building practical web applications with React, Next.js, and TypeScript." />
+<meta name="theme-color" content="#0a0a0a" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="grid-bg"></div>
 
@@ -30,14 +41,15 @@
       <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
       </button>
-      <a class="btn btn-primary open-contact-modal" href="#">
+      <button type="button" class="btn btn-primary open-contact-modal" aria-haspopup="dialog" aria-controls="contact-modal">
         <span class="btn-status-dot"></span>
         Contact
-      </a>
+      </button>
     </div>
   </div>
 </nav>
 
+<main id="main-content" tabindex="-1">
 <!-- ============ HERO ============ -->
 <section id="top" class="shell hero">
   <div class="hero-meta">
@@ -66,12 +78,12 @@
           View My Work
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <a class="btn btn-secondary open-contact-modal" href="#">
+        <button type="button" class="btn btn-secondary open-contact-modal" aria-haspopup="dialog" aria-controls="contact-modal">
           Contact Me
-        </a>
-        <a class="btn btn-ghost open-resume-modal" href="#">
+        </button>
+        <button type="button" class="btn btn-ghost open-resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">
           Resume
-        </a>
+        </button>
       </div>
     </div>
 
@@ -320,7 +332,7 @@
             <span class="pw-url">autospec.app</span>
           </div>
           <div class="pw-body">
-            <img class="autospec-shot" src="public/images/autospec-preview.png" alt="AutoSpec preview screenshot" />
+            <img class="autospec-shot" src="public/images/autospec-preview.png" width="1917" height="905" loading="lazy" decoding="async" alt="AutoSpec preview screenshot" />
           </div>
         </div>
       </div>
@@ -416,7 +428,7 @@
         </div>
         <div class="case-block">
           <div class="highlights-title">Solution</div>
-          <p class="proj-desc">An AI receptionist / "AI employee" platform in development, focused on dependable conversational workflows and durable, restart-safe data handling so context on a caller is never lost.</p>
+          <p class="proj-desc">An AI receptionist / "AI employee" platform in development, focused on dependable conversational workflows, PostgreSQL-backed persistence, and recovery of caller context after restarts.</p>
         </div>
 
         <div class="proj-highlights">
@@ -454,7 +466,7 @@
           <div class="pw-body">
             <div class="chat-bubble from-caller">"Hi, are you open Saturday?"</div>
             <div class="chat-bubble from-ai">Yes — Saturday 9am–2pm. Want me to book you in?</div>
-            <div class="status-row"><span class="status-dot"></span> Call connected · persisting to Postgres</div>
+            <div class="status-row"><span class="status-dot"></span> Illustrative workflow · PostgreSQL persistence</div>
           </div>
         </div>
       </div>
@@ -536,7 +548,7 @@
         </div>
         <div class="compact-info">
           <div class="proj-tag-row">AI / Computer Vision</div>
-          <h4 class="proj-title">SKINSTRIC AI</h4>
+          <h3 class="proj-title">SKINSTRIC AI</h3>
           <p class="proj-desc">An AI-driven skin analysis interface with a clean, editorial UI from capture through detailed results.</p>
           <div class="proj-stack">
             <span class="chip">React</span>
@@ -568,8 +580,8 @@
         </div>
         <div class="compact-info">
           <div class="proj-tag-row">Streaming Platform</div>
-          <h4 class="proj-title">Disney+ Clone</h4>
-          <p class="proj-desc">A full Disney+ clone with a dynamic content grid and a responsive UI from mobile to desktop.</p>
+          <h3 class="proj-title">Disney+ Clone</h3>
+          <p class="proj-desc">A Disney+-inspired frontend with a dynamic content grid and a responsive interface from mobile to desktop.</p>
           <div class="proj-stack">
             <span class="chip">Next.js</span>
             <span class="chip">TypeScript</span>
@@ -598,7 +610,7 @@
         </div>
         <div class="compact-info">
           <div class="proj-tag-row">E-Commerce</div>
-          <h4 class="proj-title">IronHorse Garage</h4>
+          <h3 class="proj-title">IronHorse Garage</h3>
           <p class="proj-desc">A modern muscle car marketplace with featured listings, browsing, and a bold automotive identity.</p>
           <div class="proj-stack">
             <span class="chip">Next.js</span>
@@ -622,9 +634,9 @@
             </div>
             <div class="pw-body">
               <div class="dm-title">DriveMatch</div>
-              <div class="dm-search">
-                <input value="cheap SUV under 20k" readonly />
-                <button>Search</button>
+              <div class="dm-search" aria-hidden="true">
+                <span class="dm-search-input">cheap SUV under 20k</span>
+                <span class="dm-search-button">Search</span>
               </div>
               <div class="dm-grid">
                 <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2020 Camry</div><div class="dm-meta dm-price">$24,400</div></div>
@@ -635,7 +647,7 @@
         </div>
         <div class="compact-info">
           <div class="proj-tag-row">AI / Recommendation</div>
-          <h4 class="proj-title">DriveMatch</h4>
+          <h3 class="proj-title">DriveMatch</h3>
           <p class="proj-desc">Smarter car recommendations from natural-language search, with filtered, ranked matches and pricing.</p>
           <div class="proj-stack">
             <span class="chip">React</span>
@@ -696,10 +708,12 @@
   <p class="contact-copy">I'm open to frontend software development opportunities and collaboration on practical web applications. I work with React, Next.js, and TypeScript.</p>
   <div class="contact-actions">
     <button type="button" class="btn btn-primary open-contact-modal" aria-haspopup="dialog" aria-controls="contact-modal">Contact Me</button>
-    <button type="button" class="btn btn-ghost open-resume-modal">Resume</button>
+    <button type="button" class="btn btn-ghost open-resume-modal" aria-haspopup="dialog" aria-controls="resume-modal">Resume</button>
   </div>
   <a class="contact-email" href="mailto:curtvance.dev@hotmail.com">curtvance.dev@hotmail.com</a>
 </section>
+
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer>
@@ -727,12 +741,13 @@
       <textarea id="contact-message" name="message" placeholder="Your message" rows="5" required></textarea>
       <button type="submit" class="btn btn-primary">Send message</button>
     </form>
+    <p id="contact-feedback" role="status" hidden>Message sending is currently unavailable. Please try again or email <a href="mailto:curtvance.dev@hotmail.com">curtvance.dev@hotmail.com</a>. Your message is still in the form.</p>
   </div>
 </div>
 <div class="modal-overlay" id="resume-modal">
-  <div class="contact-modal">
-    <button class="modal-close" id="resume-modal-close">×</button>
-    <h2>Resume</h2>
+  <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <button type="button" class="modal-close" id="resume-modal-close" aria-label="Close resume">×</button>
+    <h2 id="resume-modal-title">Resume</h2>
     <p>View or download my latest resume.</p>
 
     <div class="modal-actions">
