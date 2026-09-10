@@ -184,57 +184,69 @@
 
 <!-- ============ PROJECTS ============ -->
 <section id="work" class="shell section">
- <div class="current-build">
-  <span class="info-key">Current Build</span>
-  <span class="info-val">
-    🔒 <strong>ASAP Pipeline</strong> • Private internal CRM & workflow platform for ASAP Moving & Hauling. Currently building lead management, follow-ups, archive history, activity logging, and team collaboration features. This application is intentionally private because it contains confidential business and customer information.
-  </span>
-</div>
   <div class="section-head">
     <div>
       <div class="section-label">01 · Selected Work</div>
-      <h2 class="section-title">Projects I've shipped recently.</h2>
+      <h2 class="section-title">Real products, not just demos.</h2>
     </div>
-    <p class="section-sub">A selection of personal builds exploring streaming platforms, e-commerce, AI tooling, and analysis interfaces. Full repos on GitHub.</p>
+    <p class="section-sub">Engineering case studies from production and in-progress product work, plus earlier frontend builds. Full repos on GitHub where available.</p>
   </div>
+
+  <div class="group-label">Featured Engineering Work</div>
 
   <div class="projects">
 
-      <!-- Project 1: AutoSpec -->
+    <!-- Featured 1: AutoSpec -->
     <article class="project">
       <div class="proj-info">
         <div class="proj-tag-row">
-          <span class="proj-num">01 / 05</span>
+          <span class="proj-num">01 / 04</span>
           <span>·</span>
           <span>Technician Workflow</span>
           <span>·</span>
           <span>2026</span>
         </div>
-        <span class="chip chip-featured">⭐ Featured Project</span>
+        <div class="proj-badges">
+          <span class="chip chip-featured">⭐ Featured</span>
+          <span class="chip chip-status">Production App</span>
+        </div>
         <h3 class="proj-title">AutoSpec</h3>
-        <p class="proj-desc">Technician workflow application that combines live vehicle lookup, service specifications, diagnostic codes, job notes, and parts tracking into a single streamlined interface. Built with Next.js, React, TypeScript, Tailwind CSS, Jest, and the NHTSA API.</p>
+
+        <div class="case-block">
+          <div class="highlights-title">Problem</div>
+          <p class="proj-desc">Technicians often juggle multiple tools and browser tabs just to pull a vehicle's specs, diagnostic codes, and job history while working a job.</p>
+        </div>
+        <div class="case-block">
+          <div class="highlights-title">Solution</div>
+          <p class="proj-desc">AutoSpec centralizes live vehicle lookup, service specs, diagnostic codes, job notes, and parts tracking into one fast, mobile-friendly interface.</p>
+        </div>
+
         <div class="proj-highlights">
-          <div class="highlights-title">Project Highlights</div>
+          <div class="highlights-title">Key Engineering Highlights</div>
           <div class="highlights-list">
-            <div class="highlight-item">Live NHTSA API Integration</div>
-            <div class="highlight-item">React Query Data Fetching</div>
-            <div class="highlight-item">TypeScript Architecture</div>
-            <div class="highlight-item">Responsive Mobile Design</div>
-            <div class="highlight-item">Jest Test Suite</div>
-            <div class="highlight-item">GitHub Actions Continuous Integration</div>
-            <div class="highlight-item">Local Storage Persistence</div>
+            <div class="highlight-item">Live NHTSA API integration</div>
+            <div class="highlight-item">React Query data fetching &amp; caching</div>
+            <div class="highlight-item">Responsive, mobile-first UI</div>
+            <div class="highlight-item">Jest test suite</div>
+            <div class="highlight-item">GitHub Actions CI pipeline</div>
+            <div class="highlight-item">Local storage persistence</div>
           </div>
         </div>
-        <div class="proj-stack">
-          <span class="chip">Next.js</span>
-          <span class="chip">React</span>
-          <span class="chip">TypeScript</span>
-          <span class="chip">Tailwind CSS</span>
-          <span class="chip">React Query</span>
-          <span class="chip">Jest</span>
-          <span class="chip">GitHub Actions</span>
-          <span class="chip">NHTSA API</span>
+
+        <div>
+          <div class="highlights-title">Technologies</div>
+          <div class="proj-stack">
+            <span class="chip">Next.js</span>
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind CSS</span>
+            <span class="chip">React Query</span>
+            <span class="chip">Jest</span>
+            <span class="chip">GitHub Actions</span>
+            <span class="chip">NHTSA API</span>
+          </div>
         </div>
+
         <div class="proj-links">
           <a class="proj-link" href="https://github.com/cvancedev/autospec-app" target="_blank" rel="noopener">View code →</a>
           <a class="proj-link" href="https://autospec-app.vercel.app" target="_blank" rel="noopener">Live demo →</a>
@@ -253,174 +265,330 @@
       </div>
     </article>
 
-      <!-- Project 2: SKINSTRIC AI -->
+    <!-- Featured 2: Distributor Assistant -->
     <article class="project reverse">
       <div class="proj-info">
         <div class="proj-tag-row">
-          <span class="proj-num">02 / 05</span>
+          <span class="proj-num">02 / 04</span>
           <span>·</span>
-          <span>AI / Computer Vision</span>
+          <span>Distributor Workflow</span>
           <span>·</span>
           <span>2026</span>
         </div>
-        <span class="chip chip-featured">⭐ Featured Project</span>
-        <h3 class="proj-title">SKINSTRIC AI</h3>
-        <p class="proj-desc">An AI-driven skin analysis interface. Clean, editorial UI that walks users through capture, analysis, and detailed results — built to feel premium and clinical without being cold.</p>
-        <div class="proj-stack">
-          <span class="chip">React</span>
-          <span class="chip">JavaScript</span>
-          <span class="chip">AI / API</span>
-          <span class="chip">Editorial UI</span>
+        <div class="proj-badges">
+          <span class="chip chip-featured">⭐ Featured</span>
+          <span class="chip chip-status">Prototype</span>
         </div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/cvancedev/SKINSTRIC-AI" target="_blank" rel="noopener">View code →</a>
-          <a class="proj-link" href="https://skinstric-ai-ruddy.vercel.app" target="_blank" rel="noopener">Live demo →</a>
-        </div>
-      </div>
-      <div class="proj-visual pv-skin">
-        <div class="preview-window">
-          <div class="pw-head">
-            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-            <span class="pw-url">skinstric.ai</span>
-          </div>
-          <div class="pw-body">
-            <div class="skin-label">Analysis Complete</div>
-            <div class="skin-circle"></div>
-            <div class="skin-result">Normal / Combination</div>
-            <div class="skin-label">98% confidence</div>
-          </div>
-        </div>
-      </div>
-    </article>
+        <h3 class="proj-title">Distributor Assistant</h3>
 
-    <!-- Project 3: Disney+ Clone -->
-    <article class="project">
-      <div class="proj-info">
-        <div class="proj-tag-row">
-          <span class="proj-num">03 / 05</span>
-          <span>·</span>
-          <span>Streaming Platform</span>
-          <span>·</span>
-          <span>2026</span>
+        <div class="case-block">
+          <div class="highlights-title">Problem</div>
+          <p class="proj-desc">Distributors track load plans, shortages, store-specific notes, and end-of-week reconciliation across many stops — often from memory and scattered notes.</p>
         </div>
-        <h3 class="proj-title">Disney+ Clone</h3>
-        <p class="proj-desc">A full Disney+ clone built with Next.js, featuring a dynamic content grid, branded sections for Disney, Pixar, Marvel, Star Wars and Nat Geo, and a responsive UI that scales from mobile to desktop.</p>
-        <div class="proj-stack">
-          <span class="chip">Next.js</span>
-          <span class="chip">TypeScript</span>
-          <span class="chip">Tailwind</span>
-          <span class="chip">Responsive UI</span>
+        <div class="case-block">
+          <div class="highlights-title">Solution</div>
+          <p class="proj-desc">A frontend prototype, grounded in real distributor workflow discovery, that organizes the daily route — briefing, load planning, in-store execution, and reconciliation — while keeping the distributor in full control.</p>
         </div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/cvancedev/Disney-clone-fresh" target="_blank" rel="noopener">View code →</a>
-          <a class="proj-link" href="https://disney-clone-fresh.vercel.app" target="_blank" rel="noopener">Live demo →</a>
+
+        <div class="proj-highlights">
+          <div class="highlights-title">Key Engineering Highlights</div>
+          <div class="highlights-list">
+            <div class="highlight-item">Daily Briefing &amp; Monday Load Plan</div>
+            <div class="highlight-item">Customizable loading order &amp; shortage allocation</div>
+            <div class="highlight-item">Store Workspace with ordered-vs-picked verification</div>
+            <div class="highlight-item">Adaptive route recommendations</div>
+            <div class="highlight-item">Friday reconciliation &amp; stale product awareness</div>
+            <div class="highlight-item">Concept-stage Smart Shelf Scan &amp; voice store requests (simulated, not production AI)</div>
+          </div>
         </div>
+
+        <div>
+          <div class="highlights-title">Technologies</div>
+          <div class="proj-stack">
+            <span class="chip">Next.js</span>
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="proj-note">Frontend prototype — not connected to a live distributor system. Designed to work alongside an official distributor system, not replace transactions, accounting, or inventory records. No public repo or demo yet.</div>
       </div>
-      <div class="proj-visual pv-disney">
+      <div class="proj-visual pv-distributor">
         <div class="preview-window">
           <div class="pw-head">
             <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-            <span class="pw-url">disney-clone.app</span>
+            <span class="pw-url">prototype / concept</span>
           </div>
           <div class="pw-body">
-            <div class="hero-img"></div>
-            <div class="logo-row">
-              <div>Disney</div><div>Pixar</div><div>Marvel</div><div>Star Wars</div><div>Nat Geo</div>
+            <div class="board-title">Monday Load Plan</div>
+            <div class="board-grid">
+              <div class="board-card"><div class="board-label">Stop 1</div><div class="board-value">Shortage flagged</div></div>
+              <div class="board-card"><div class="board-label">Route ETA</div><div class="board-value">8:45 AM</div></div>
+              <div class="board-card"><div class="board-label">Store Notes</div><div class="board-value">3 new</div></div>
+              <div class="board-card"><div class="board-label">Reconciliation</div><div class="board-value">Pending</div></div>
             </div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- Project 4: IronHorse Garage -->
+    <!-- Featured 3: AI Receptionist Platform -->
+    <article class="project">
+      <div class="proj-info">
+        <div class="proj-tag-row">
+          <span class="proj-num">03 / 04</span>
+          <span>·</span>
+          <span>AI Employee Platform</span>
+          <span>·</span>
+          <span>2026</span>
+        </div>
+        <div class="proj-badges">
+          <span class="chip chip-featured">⭐ Featured</span>
+          <span class="chip chip-status">In Development</span>
+        </div>
+        <h3 class="proj-title">AI Receptionist Platform</h3>
+
+        <div class="case-block">
+          <div class="highlights-title">Problem</div>
+          <p class="proj-desc">Small service businesses miss calls and leads when there's no one available to pick up the phone.</p>
+        </div>
+        <div class="case-block">
+          <div class="highlights-title">Solution</div>
+          <p class="proj-desc">An AI receptionist / "AI employee" platform in development, focused on dependable conversational workflows and durable, restart-safe data handling so context on a caller is never lost.</p>
+        </div>
+
+        <div class="proj-highlights">
+          <div class="highlights-title">Key Engineering Highlights</div>
+          <div class="highlights-list">
+            <div class="highlight-item">Dependable conversational workflow design</div>
+            <div class="highlight-item">PostgreSQL-backed persistence</div>
+            <div class="highlight-item">Recovery / restart-safe architecture</div>
+            <div class="highlight-item">Configurable voice experience</div>
+            <div class="highlight-item">Business configuration tooling</div>
+            <div class="highlight-item">Planned inbound/outbound call workflows</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="highlights-title">Technologies</div>
+          <div class="proj-stack">
+            <span class="chip">Next.js</span>
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Conversational AI</span>
+            <span class="chip">Voice Configuration</span>
+          </div>
+        </div>
+
+        <div class="proj-note">In development — not yet publicly deployed. No public repo or demo yet.</div>
+      </div>
+      <div class="proj-visual pv-receptionist">
+        <div class="preview-window">
+          <div class="pw-head">
+            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+            <span class="pw-url">in development</span>
+          </div>
+          <div class="pw-body">
+            <div class="chat-bubble from-caller">"Hi, are you open Saturday?"</div>
+            <div class="chat-bubble from-ai">Yes — Saturday 9am–2pm. Want me to book you in?</div>
+            <div class="status-row"><span class="status-dot"></span> Call connected · persisting to Postgres</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Featured 4: ASAP Pipeline -->
     <article class="project reverse">
       <div class="proj-info">
         <div class="proj-tag-row">
-          <span class="proj-num">04 / 05</span>
+          <span class="proj-num">04 / 04</span>
           <span>·</span>
-          <span>E-Commerce</span>
+          <span>Internal CRM</span>
           <span>·</span>
           <span>2026</span>
         </div>
-        <h3 class="proj-title">IronHorse Garage</h3>
-        <p class="proj-desc">A modern muscle car marketplace built with Next.js — classic American muscle cars for collectors and enthusiasts. Features featured listings, browsing, cart, and a bold automotive visual identity.</p>
-        <div class="proj-stack">
-          <span class="chip">Next.js</span>
-          <span class="chip">TypeScript</span>
-          <span class="chip">Tailwind</span>
-          <span class="chip">UI/UX</span>
+        <div class="proj-badges">
+          <span class="chip chip-featured">⭐ Featured</span>
+          <span class="chip chip-status">Private / Internal Tool</span>
         </div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/cvancedev/Muscle-Car-Marketplace" target="_blank" rel="noopener">View code →</a>
-          <a class="proj-link" href="https://muscle-car-marketplace.vercel.app" target="_blank" rel="noopener">Live demo →</a>
+        <h3 class="proj-title">ASAP Pipeline</h3>
+
+        <div class="case-block">
+          <div class="highlights-title">Problem</div>
+          <p class="proj-desc">ASAP Moving &amp; Hauling needed a way to track leads, follow-ups, and team activity without relying on spreadsheets and scattered messages.</p>
         </div>
+        <div class="case-block">
+          <div class="highlights-title">Solution</div>
+          <p class="proj-desc">A private internal CRM and workflow tool built specifically for ASAP's day-to-day lead and job pipeline.</p>
+        </div>
+
+        <div class="proj-highlights">
+          <div class="highlights-title">Key Engineering Highlights</div>
+          <div class="highlights-list">
+            <div class="highlight-item">Lead management &amp; follow-up tracking</div>
+            <div class="highlight-item">Duplicate lead detection</div>
+            <div class="highlight-item">Activity &amp; history logging</div>
+            <div class="highlight-item">Team collaboration workflow</div>
+            <div class="highlight-item">Responsive interface for office and mobile use</div>
+          </div>
+        </div>
+
+        <div class="proj-note">Private codebase — no public repo or demo, to protect confidential business and customer data.</div>
       </div>
-      <div class="proj-visual pv-iron">
+      <div class="proj-visual pv-asap">
         <div class="preview-window">
           <div class="pw-head">
             <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-            <span class="pw-url">ironhorse.garage</span>
+            <span class="pw-url">private / internal</span>
           </div>
           <div class="pw-body">
-            <div class="iron-hero">
-              <span class="iron-badge">🏁 IronHorse</span>
-              <div class="iron-title">IronHorse<br/>Garage</div>
-              <div class="iron-cta">Browse Cars</div>
-            </div>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <div class="private-label">Confidential</div>
+            <div class="private-sub">Interface details withheld to protect business &amp; customer data.</div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- Project 5: DriveMatch -->
-    <article class="project">
-      <div class="proj-info">
-        <div class="proj-tag-row">
-          <span class="proj-num">05 / 05</span>
-          <span>·</span>
-          <span>AI / Recommendation</span>
-          <span>·</span>
-          <span>2026</span>
-        </div>
-        <h3 class="proj-title">DriveMatch</h3>
-        <p class="proj-desc">Smarter car recommendations powered by AI. Users describe what they're looking for in natural language ("cheap SUV under 20K") and get filtered, ranked vehicle matches with key specs and pricing.</p>
-        <div class="proj-stack">
-          <span class="chip">React</span>
-          <span class="chip">AI Integration</span>
-          <span class="chip">TypeScript</span>
-          <span class="chip">Tailwind</span>
-        </div>
-        <div class="proj-links">
-          <a class="proj-link" href="https://github.com/cvancedev/AI_CAR_FINDER" target="_blank" rel="noopener">View code →</a>
-          <a class="proj-link" href="https://ai-car-finder-app.vercel.app" target="_blank" rel="noopener">Live demo →</a>
-        </div>
-      </div>
-      <div class="proj-visual pv-drive">
-        <div class="preview-window">
-          <div class="pw-head">
-            <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-            <span class="pw-url">drivematch.app</span>
-          </div>
-          <div class="pw-body">
-            <div class="dm-title">DriveMatch</div>
-            <div class="dm-sub">Smarter car recommendations powered by AI</div>
-            <div class="dm-search">
-              <input value="cheap SUV under 20k" readonly />
-              <button>Search</button>
+  </div>
+
+  <div class="projects-secondary">
+    <div class="group-label">Additional Projects</div>
+    <div class="projects-compact">
+
+      <!-- Compact: SKINSTRIC AI -->
+      <article class="compact-card">
+        <div class="compact-visual pv-skin">
+          <div class="preview-window">
+            <div class="pw-head">
+              <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+              <span class="pw-url">skinstric.ai</span>
             </div>
-            <div class="dm-grid">
-              <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2020 Ford F-150</div><div class="dm-meta dm-price">$35,000</div></div>
-              <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2020 Camry</div><div class="dm-meta dm-price">$24,400</div></div>
-              <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2020 Altima</div><div class="dm-meta dm-price">$18,900</div></div>
-              <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2022 Tesla M3</div><div class="dm-meta dm-price">$32,500</div></div>
+            <div class="pw-body">
+              <div class="skin-label">Analysis Complete</div>
+              <div class="skin-circle"></div>
+              <div class="skin-result">Normal / Combination</div>
             </div>
           </div>
         </div>
-      </div>
-    </article>
+        <div class="compact-info">
+          <div class="proj-tag-row">AI / Computer Vision</div>
+          <h4 class="proj-title">SKINSTRIC AI</h4>
+          <p class="proj-desc">An AI-driven skin analysis interface with a clean, editorial UI from capture through detailed results.</p>
+          <div class="proj-stack">
+            <span class="chip">React</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">AI / API</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/cvancedev/SKINSTRIC-AI" target="_blank" rel="noopener">Code →</a>
+            <a class="proj-link" href="https://skinstric-ai-ruddy.vercel.app" target="_blank" rel="noopener">Demo →</a>
+          </div>
+        </div>
+      </article>
 
-  
+      <!-- Compact: Disney+ Clone -->
+      <article class="compact-card">
+        <div class="compact-visual pv-disney">
+          <div class="preview-window">
+            <div class="pw-head">
+              <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+              <span class="pw-url">disney-clone.app</span>
+            </div>
+            <div class="pw-body">
+              <div class="hero-img"></div>
+              <div class="logo-row">
+                <div>Disney</div><div>Pixar</div><div>Marvel</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="compact-info">
+          <div class="proj-tag-row">Streaming Platform</div>
+          <h4 class="proj-title">Disney+ Clone</h4>
+          <p class="proj-desc">A full Disney+ clone with a dynamic content grid and a responsive UI from mobile to desktop.</p>
+          <div class="proj-stack">
+            <span class="chip">Next.js</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/cvancedev/Disney-clone-fresh" target="_blank" rel="noopener">Code →</a>
+            <a class="proj-link" href="https://disney-clone-fresh.vercel.app" target="_blank" rel="noopener">Demo →</a>
+          </div>
+        </div>
+      </article>
 
+      <!-- Compact: IronHorse Garage -->
+      <article class="compact-card">
+        <div class="compact-visual pv-garage">
+          <div class="preview-window">
+            <div class="pw-head">
+              <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+              <span class="pw-url">ironhorse.garage</span>
+            </div>
+            <div class="pw-body">
+              <span class="garage-badge">🏁 IronHorse</span>
+              <div class="garage-title">IronHorse<br/>Garage</div>
+            </div>
+          </div>
+        </div>
+        <div class="compact-info">
+          <div class="proj-tag-row">E-Commerce</div>
+          <h4 class="proj-title">IronHorse Garage</h4>
+          <p class="proj-desc">A modern muscle car marketplace with featured listings, browsing, and a bold automotive identity.</p>
+          <div class="proj-stack">
+            <span class="chip">Next.js</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/cvancedev/Muscle-Car-Marketplace" target="_blank" rel="noopener">Code →</a>
+            <a class="proj-link" href="https://muscle-car-marketplace.vercel.app" target="_blank" rel="noopener">Demo →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Compact: DriveMatch -->
+      <article class="compact-card">
+        <div class="compact-visual pv-drive">
+          <div class="preview-window">
+            <div class="pw-head">
+              <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+              <span class="pw-url">drivematch.app</span>
+            </div>
+            <div class="pw-body">
+              <div class="dm-title">DriveMatch</div>
+              <div class="dm-search">
+                <input value="cheap SUV under 20k" readonly />
+                <button>Search</button>
+              </div>
+              <div class="dm-grid">
+                <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2020 Camry</div><div class="dm-meta dm-price">$24,400</div></div>
+                <div class="dm-card"><div class="dm-thumb"></div><div class="dm-meta">2020 Altima</div><div class="dm-meta dm-price">$18,900</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="compact-info">
+          <div class="proj-tag-row">AI / Recommendation</div>
+          <h4 class="proj-title">DriveMatch</h4>
+          <p class="proj-desc">Smarter car recommendations from natural-language search, with filtered, ranked matches and pricing.</p>
+          <div class="proj-stack">
+            <span class="chip">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind</span>
+          </div>
+          <div class="proj-links">
+            <a class="proj-link" href="https://github.com/cvancedev/AI_CAR_FINDER" target="_blank" rel="noopener">Code →</a>
+            <a class="proj-link" href="https://ai-car-finder-app.vercel.app" target="_blank" rel="noopener">Demo →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
