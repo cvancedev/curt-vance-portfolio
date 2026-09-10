@@ -293,43 +293,67 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- STACK ---------- */
-.stack-grid {
+.stack-categories {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--line);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.stack-category {
+  background: var(--bg-elev);
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-.stack-cell {
-  background: var(--bg-elev);
   padding: 28px;
-  display: flex; flex-direction: column; gap: 12px;
-  min-height: 180px;
-  position: relative;
-  transition: background 0.2s;
+  display: flex; flex-direction: column; gap: 22px;
+  transition: border-color 0.2s;
 }
-.stack-cell:hover { background: var(--bg-card); }
-.stack-icon {
-  width: 36px; height: 36px;
-  display: grid; place-items: center;
-  color: var(--accent);
+.stack-category:hover { border-color: var(--line-2); }
+.stack-category-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
 }
-.stack-icon svg { width: 100%; height: 100%; }
-.stack-name {
-  font-size: 18px; font-weight: 500; letter-spacing: -0.01em;
+.stack-category-title {
+  font-size: 18px; font-weight: 600; letter-spacing: -0.01em;
   margin: 0;
 }
-.stack-desc {
-  color: var(--fg-3); font-size: 13px;
-  font-family: var(--font-mono);
-  margin-top: auto;
+.stack-category-sub {
+  display: block;
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--fg-3); text-transform: uppercase; letter-spacing: 0.08em;
+  margin-top: 4px;
 }
-.stack-num {
-  position: absolute; top: 14px; right: 16px;
+.stack-category-index {
   font-family: var(--font-mono); font-size: 11px;
   color: var(--fg-3);
+}
+.stack-items {
+  display: flex; flex-direction: column; gap: 14px;
+}
+.stack-item {
+  display: flex; flex-direction: column; gap: 3px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.stack-item:last-child { border-bottom: 0; padding-bottom: 0; }
+.stack-item-name {
+  font-family: var(--font-mono); font-size: 14px; font-weight: 500;
+  color: var(--fg);
+}
+.stack-item-desc {
+  font-size: 12.5px; line-height: 1.55; color: var(--fg-2);
+}
+.stack-item-core .stack-item-name {
+  font-weight: 700;
+}
+.stack-item-core .stack-item-name::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 /* ---------- PROJECTS ---------- */
@@ -757,7 +781,6 @@ footer {
 @media (max-width: 960px) {
   :root { --pad: 28px; }
   .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .stack-grid { grid-template-columns: repeat(2, 1fr); }
   .project, .project.reverse { grid-template-columns: 1fr; }
   .project.reverse .proj-info { order: 1; }
   .project.reverse .proj-visual { order: 2; border-right: 0; border-top: 1px solid var(--line); }
@@ -786,7 +809,7 @@ footer {
   .marquee-track { font-size: 12px; gap: 36px; }
   .section-title { font-size: clamp(24px, 3vw, 48px); }
   .section { padding: 48px 0; }
-  .stack-grid { grid-template-columns: 1fr; }
+  .stack-categories { grid-template-columns: 1fr; }
   .proj-tag-row { font-size: 10px; }
   .proj-title { font-size: 20px; }
   .proj-desc { font-size: 14px; max-width: 100%; }
@@ -823,11 +846,11 @@ footer {
   .section-label { font-size: 10px; }
   .section-title { font-size: clamp(20px, 2.5vw, 48px); }
   .section-sub { font-size: 13px; max-width: 100%; }
-  .stack-cell { min-height: 140px; padding: 20px; }
-  .stack-icon { width: 28px; height: 28px; }
-  .stack-name { font-size: 14px; }
-  .stack-desc { font-size: 11px; }
-  .stack-num { font-size: 10px; top: 10px; right: 12px; }
+  .stack-category { padding: 20px; gap: 18px; }
+  .stack-category-head { padding-bottom: 14px; }
+  .stack-category-title { font-size: 16px; }
+  .stack-item-name { font-size: 13px; }
+  .stack-item-desc { font-size: 12px; }
   .info-key { font-size: 10px; }
   .info-val { font-size: 12px; }
   .proj-info { padding: 24px 20px 18px; gap: 16px; }
