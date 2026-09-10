@@ -30,20 +30,45 @@ const modal = document.getElementById("contact-modal");
 const openModalButtons = document.querySelectorAll(".open-contact-modal");
 const closeModalButton = document.getElementById("modal-close");
 
+let contactOpener;
+function closeContactModal() {
+  modal.classList.remove("active");
+  contactOpener?.focus();
+}
+
 openModalButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
+    contactOpener = button;
     modal.classList.add("active");
+    document.getElementById("contact-name").focus();
   });
 });
 
-closeModalButton.addEventListener("click", () => {
-  modal.classList.remove("active");
-});
+closeModalButton.addEventListener("click", closeContactModal);
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.classList.remove("active");
+    closeContactModal();
+  }
+});
+
+modal.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    e.preventDefault();
+    closeContactModal();
+  }
+  if (e.key === "Tab") {
+    const controls = [...modal.querySelectorAll('button, input, textarea')];
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
   }
 });
 
@@ -62,7 +87,7 @@ contactForm.addEventListener("submit", function (e) {
     .then(() => {
       alert("✅ Thanks for reaching out! I'll get back to you soon.");
       contactForm.reset();
-      modal.classList.remove("active");
+      closeContactModal();
     })
     .catch((error) => {
       console.error("EmailJS Error:", error);
